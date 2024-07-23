@@ -45,7 +45,7 @@ readdirSync('./events').forEach(e => {
     console.log(chalk.blue`[EVENT]` + ` ${name} eventi yüklendi.`)
 });
 
-client.login(config.token)
+client.login(process.env.token)
 client.setMaxListeners(50)
 
 process.on("uncaughtException", async (error) => {
